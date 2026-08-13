@@ -218,3 +218,105 @@ while True:
 
     else:
         print("Invalid choice!")
+
+
+'''4.	Write a program to manage two different projects in your company, and you need to analyze employee involvement. The employees working on each project are represented as sets. Write a program that:
+●	Displays the employees working on both projects (intersection).
+●	Displays the employees working only on one project (difference).
+●	Displays the total unique employees across both projects (union).
+Tasks:
+●	Use sets to represent the employees in each project.
+●	Perform union, intersection, and difference operations to analyze employee involvement'''
+
+
+pa = {"Alice", "Bob", "Charlie", "David", "Eva"}
+pb = {"Charlie", "David", "Frank", "Grace"}
+
+both = pa.intersection(pb)
+a_only = pa.difference(pb)
+b_only = pb.difference(pa)
+uniq = pa.union(pb)
+
+print("Project A:", pa)
+print("Project B:", pb)
+print("\n--- Analysis ---")
+print("Both projects:", both)
+print("Only Project A:", a_only)
+print("Only Project B:", b_only)
+print("Total unique:", uniq)
+
+
+
+'''5.	Write a program to build a simple text analysis tool. The tool should perform the following operations on a given paragraph of text:
+●	Count the total number of words.
+●	Count the frequency of each word.
+●	Identify and display the top 3 most frequent words.
+●	Count the number of vowels in the entire text.
+Tasks:
+●	Use string manipulation to split the text into words and to check for vowels.
+●	Use a dictionary to store the word frequencies'''
+
+text = input("Enter a paragraph: ")
+
+words = text.lower().split()
+
+print("Total words:", len(words))
+
+frequency = {}
+
+for word in words:
+    word = word.strip(".,!?;:")
+    frequency[word] = frequency.get(word, 0) + 1
+
+print("\nWord Frequency:")
+for word, count in frequency.items():
+    print(word, ":", count)
+
+top3 = sorted(frequency.items(), key=lambda x: x[1], reverse=True)[:3]
+
+print("\nTop 3 frequent words:")
+for word, count in top3:
+    print(word, ":", count)
+
+vowels = "aeiou"
+vowel_count = 0
+
+for char in text.lower():
+    if char in vowels:
+        vowel_count += 1
+
+print("\nTotal vowels:", vowel_count)
+
+
+'''6.	Write a program to analyze the vocabulary used in two different books. You need to:
+●	Find all unique words used in each book.
+●	Identify the common words between both books.
+●	Identify words that are unique to each book (not found in the other book).
+●	Display the total number of unique words across both books.
+Tasks:
+●	Use sets to find the unique words in each text, and perform set operations to find the union, intersection, and differences.
+'''
+
+book1 = input("Enter text of Book 1: ").lower()
+book2 = input("Enter text of Book 2: ").lower()
+
+set1 = set(book1.split())
+set2 = set(book2.split())
+
+common = set1.intersection(set2)
+unique1 = set1.difference(set2)
+unique2 = set2.difference(set1)
+all_words = set1.union(set2)
+
+print("\nUnique words in Book 1:")
+print(set1)
+print("\nUnique words in Book 2:")
+print(set2)
+print("\nCommon words:")
+print(common)
+print("\nWords unique to Book 1:")
+print(unique1)
+print("\nWords unique to Book 2:")
+print(unique2)
+
+print("\nTotal unique words across both books:", len(all_words))
