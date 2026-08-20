@@ -8,96 +8,96 @@ Tasks:
 ●	Use lists to store the student names and their corresponding grades.
 ●	Implement functions to add, update, remove, and calculate the average and extreme grades"""
 
-students = []
-grades = []
+# students = []
+# grades = []
 
-def add_students(name, grade_value):
-    students.append(name)
-    grades.append(grade_value)
-    print(f"{name} is added successfully!")
+# def add_students(name, grade_value):
+#     students.append(name)
+#     grades.append(grade_value)
+#     print(f"{name} is added successfully!")
 
-def update_grade(name, new_grade):
-    if name in students:
-        index = students.index(name)
-        grades[index] = new_grade
-        print(f"{name}'s grade is updated to {new_grade} successfully!")
-    else:
-        print("Student not found!")
+# def update_grade(name, new_grade):
+#     if name in students:
+#         index = students.index(name)
+#         grades[index] = new_grade
+#         print(f"{name}'s grade is updated to {new_grade} successfully!")
+#     else:
+#         print("Student not found!")
 
-def remove_student(name):
-    if name in students:
-        index = students.index(name)
-        students.pop(index)
-        grades.pop(index)
-        print(f"{name} is removed successfully!")
-    else:
-        print("Student not found!")
+# def remove_student(name):
+#     if name in students:
+#         index = students.index(name)
+#         students.pop(index)
+#         grades.pop(index)
+#         print(f"{name} is removed successfully!")
+#     else:
+#         print("Student not found!")
 
-def calu_avg():
-    if len(grades) == 0:
-        print("Students not found!")
-    else:
-        avg = sum(grades) / len(grades)
-        print(f"Average grade is {avg}")
+# def calu_avg():
+#     if len(grades) == 0:
+#         print("Students not found!")
+#     else:
+#         avg = sum(grades) / len(grades)
+#         print(f"Average grade is {avg}")
 
-def dis_highest():
-    if len(grades) == 0:
-        print("Students not found!")
-    else:
-        highest = max(grades)
-        lowest = min(grades)
-        print("Highest Grade:", highest)
-        print("Lowest Grade:", lowest)
+# def dis_highest():
+#     if len(grades) == 0:
+#         print("Students not found!")
+#     else:
+#         highest = max(grades)
+#         lowest = min(grades)
+#         print("Highest Grade:", highest)
+#         print("Lowest Grade:", lowest)
 
-def display():
-    if len(students) == 0:
-        print("Students not found!")
-    else:
-        print("Student list:\n")
-        for i in range(len(students)):
-            print(students[i], ":", grades[i])
+# def display():
+#     if len(students) == 0:
+#         print("Students not found!")
+#     else:
+#         print("Student list:\n")
+#         for i in range(len(students)):
+#             print(students[i], ":", grades[i])
 
-while True:
-    print("\n--- Student Grade Management System ---")
-    print("1. Add Student")
-    print("2. Update Grade")
-    print("3. Remove Student")
-    print("4. Display Students")
-    print("5. Calculate Average Grade")
-    print("6. Display Highest and Lowest Grades")
-    print("7. Exit")
+# while True:
+#     print("\n--- Student Grade Management System ---")
+#     print("1. Add Student")
+#     print("2. Update Grade")
+#     print("3. Remove Student")
+#     print("4. Display Students")
+#     print("5. Calculate Average Grade")
+#     print("6. Display Highest and Lowest Grades")
+#     print("7. Exit")
 
-    choice = input("Enter your choice: ")
+#     choice = input("Enter your choice: ")
 
-    if choice == "1":
-        name = input("Enter the name: ")
-        grade_value = float(input("Enter grades: "))
-        add_students(name, grade_value)
+#     if choice == "1":
+#         name = input("Enter the name: ")
+#         grade_value = float(input("Enter grades: "))
+#         add_students(name, grade_value)
 
-    elif choice == "2":
-        name = input("Enter the name: ")
-        new_grade = float(input("Enter grades: "))
-        update_grade(name, new_grade)
+#     elif choice == "2":
+#         name = input("Enter the name: ")
+#         new_grade = float(input("Enter grades: "))
+#         update_grade(name, new_grade)
 
-    elif choice == "3":
-        name = input("Enter the name: ")
-        remove_student(name)
+#     elif choice == "3":
+#         name = input("Enter the name: ")
+#         remove_student(name)
 
-    elif choice == "4":
-        display()
+#     elif choice == "4":
+#         display()
 
-    elif choice == "5":
-        calu_avg()
+#     elif choice == "5":
+#         calu_avg()
 
-    elif choice == "6":
-        dis_highest()
+#     elif choice == "6":
+#         dis_highest()
 
-    elif choice == "7":
-        print("Exiting program!...")
-        break
+#     elif choice == "7":
+#         print("Exiting program!...")
+#         break
 
-    else:
-        print("Invalid input!.. please try again!")
+#     else:
+#         print("Invalid input!.. please try again!")
 
 
 
@@ -111,49 +111,49 @@ Tasks:
 ●	Implement a function to calculate the Euclidean distance between two points using their tuple representations.
 ●	Implement a function to find the farthest point from the origin"""
 
-import math
+# import math
 
-# Function to calculate Euclidean distance between two points
-def distance(point1, point2):
-    return math.sqrt((point2[0] - point1[0])**2 + (point2[1] - point1[1])**2)
+# # Function to calculate Euclidean distance between two points
+# def distance(point1, point2):
+#     return math.sqrt((point2[0] - point1[0])**2 + (point2[1] - point1[1])**2)
 
-# Function to find the farthest point from the origin
-def farthest_point(points):
-    origin = (0, 0)
-    farthest = points[0]
-    max_distance = distance(origin, farthest)
+# # Function to find the farthest point from the origin
+# def farthest_point(points):
+#     origin = (0, 0)
+#     farthest = points[0]
+#     max_distance = distance(origin, farthest)
 
-    for point in points:
-        d = distance(origin, point)
-        if d > max_distance:
-            max_distance = d
-            farthest = point
+#     for point in points:
+#         d = distance(origin, point)
+#         if d > max_distance:
+#             max_distance = d
+#             farthest = point
 
-    return farthest, max_distance
+#     return farthest, max_distance
 
-# Main Program
-points = []
+# # Main Program
+# points = []
 
-n = int(input("Enter the number of points: "))
+# n = int(input("Enter the number of points: "))
 
-for i in range(n):
-    x = float(input(f"Enter x-coordinate of point {i+1}: "))
-    y = float(input(f"Enter y-coordinate of point {i+1}: "))
-    points.append((x, y))     # Store point as a tuple
+# for i in range(n):
+#     x = float(input(f"Enter x-coordinate of point {i+1}: "))
+#     y = float(input(f"Enter y-coordinate of point {i+1}: "))
+#     points.append((x, y))     # Store point as a tuple
 
-print("\nPoints:", points)
+# print("\nPoints:", points)
 
-# Distance between two given points
-p1 = int(input("\nEnter the index of first point (1 to n): ")) - 1
-p2 = int(input("Enter the index of second point (1 to n): ")) - 1
+# # Distance between two given points
+# p1 = int(input("\nEnter the index of first point (1 to n): ")) - 1
+# p2 = int(input("Enter the index of second point (1 to n): ")) - 1
 
-d = distance(points[p1], points[p2])
-print("Distance between", points[p1], "and", points[p2], "=", round(d, 2))
+# d = distance(points[p1], points[p2])
+# print("Distance between", points[p1], "and", points[p2], "=", round(d, 2))
 
-# Farthest point from origin
-point, dist = farthest_point(points)
-print("Farthest point from origin:", point)
-print("Distance from origin:", round(dist, 2))
+# # Farthest point from origin
+# point, dist = farthest_point(points)
+# print("Farthest point from origin:", point)
+# print("Distance from origin:", round(dist, 2))
 
 
 
@@ -171,53 +171,53 @@ Tasks:
 ●	Implement a function to update allowed_ips but prevent changes to server_ip.'''
 
 
-server_ip = (192, 168, 1, 100)
+# server_ip = (192, 168, 1, 100)
 
-# Mutable list of allowed IPs
-allowed_ips = [
-    "192.168.1.10",
-    "192.168.1.20"
-]
+# # Mutable list of allowed IPs
+# allowed_ips = [
+#     "192.168.1.10",
+#     "192.168.1.20"
+# ]
 
-def update_allowed_ips():
-    ip = input("Enter IP address to add: ")
-    allowed_ips.append(ip)
-    print("IP address added successfully.")
+# def update_allowed_ips():
+#     ip = input("Enter IP address to add: ")
+#     allowed_ips.append(ip)
+#     print("IP address added successfully.")
 
-def update_server_ip():
-    print("Error: server_ip cannot be changed because it is stored as a tuple.")
+# def update_server_ip():
+#     print("Error: server_ip cannot be changed because it is stored as a tuple.")
 
-def display_configuration():
-    print("\n--- Server Configuration ---")
-    print("Server IP :", server_ip)
-    print("Allowed IPs:")
-    for ip in allowed_ips:
-        print(ip)
+# def display_configuration():
+#     print("\n--- Server Configuration ---")
+#     print("Server IP :", server_ip)
+#     print("Allowed IPs:")
+#     for ip in allowed_ips:
+#         print(ip)
 
-# Main Program
-while True:
-    print("\n1. Add Allowed IP")
-    print("2. Change Server IP")
-    print("3. Display Configuration")
-    print("4. Exit")
+# # Main Program
+# while True:
+#     print("\n1. Add Allowed IP")
+#     print("2. Change Server IP")
+#     print("3. Display Configuration")
+#     print("4. Exit")
 
-    choice = int(input("Enter your choice: "))
+#     choice = int(input("Enter your choice: "))
 
-    if choice == 1:
-        update_allowed_ips()
+#     if choice == 1:
+#         update_allowed_ips()
 
-    elif choice == 2:
-        update_server_ip()
+#     elif choice == 2:
+#         update_server_ip()
 
-    elif choice == 3:
-        display_configuration()
+#     elif choice == 3:
+#         display_configuration()
 
-    elif choice == 4:
-        print("Exiting...")
-        break
+#     elif choice == 4:
+#         print("Exiting...")
+#         break
 
-    else:
-        print("Invalid choice!")
+#     else:
+#         print("Invalid choice!")
 
 
 '''4.	Write a program to manage two different projects in your company, and you need to analyze employee involvement. The employees working on each project are represented as sets. Write a program that:
@@ -229,21 +229,21 @@ Tasks:
 ●	Perform union, intersection, and difference operations to analyze employee involvement'''
 
 
-pa = {"Alice", "Bob", "Charlie", "David", "Eva"}
-pb = {"Charlie", "David", "Frank", "Grace"}
+# pa = {"Alice", "Bob", "Charlie", "David", "Eva"}
+# pb = {"Charlie", "David", "Frank", "Grace"}
 
-both = pa.intersection(pb)
-a_only = pa.difference(pb)
-b_only = pb.difference(pa)
-uniq = pa.union(pb)
+# both = pa.intersection(pb)
+# a_only = pa.difference(pb)
+# b_only = pb.difference(pa)
+# uniq = pa.union(pb)
 
-print("Project A:", pa)
-print("Project B:", pb)
-print("\n--- Analysis ---")
-print("Both projects:", both)
-print("Only Project A:", a_only)
-print("Only Project B:", b_only)
-print("Total unique:", uniq)
+# print("Project A:", pa)
+# print("Project B:", pb)
+# print("\n--- Analysis ---")
+# print("Both projects:", both)
+# print("Only Project A:", a_only)
+# print("Only Project B:", b_only)
+# print("Total unique:", uniq)
 
 
 
@@ -256,36 +256,36 @@ Tasks:
 ●	Use string manipulation to split the text into words and to check for vowels.
 ●	Use a dictionary to store the word frequencies'''
 
-text = input("Enter a paragraph: ")
+# text = input("Enter a paragraph: ")
 
-words = text.lower().split()
+# words = text.lower().split()
 
-print("Total words:", len(words))
+# print("Total words:", len(words))
 
-frequency = {}
+# frequency = {}
 
-for word in words:
-    word = word.strip(".,!?;:")
-    frequency[word] = frequency.get(word, 0) + 1
+# for word in words:
+#     word = word.strip(".,!?;:")
+#     frequency[word] = frequency.get(word, 0) + 1
 
-print("\nWord Frequency:")
-for word, count in frequency.items():
-    print(word, ":", count)
+# print("\nWord Frequency:")
+# for word, count in frequency.items():
+#     print(word, ":", count)
 
-top3 = sorted(frequency.items(), key=lambda x: x[1], reverse=True)[:3]
+# top3 = sorted(frequency.items(), key=lambda x: x[1], reverse=True)[:3]
 
-print("\nTop 3 frequent words:")
-for word, count in top3:
-    print(word, ":", count)
+# print("\nTop 3 frequent words:")
+# for word, count in top3:
+#     print(word, ":", count)
 
-vowels = "aeiou"
-vowel_count = 0
+# vowels = "aeiou"
+# vowel_count = 0
 
-for char in text.lower():
-    if char in vowels:
-        vowel_count += 1
+# for char in text.lower():
+#     if char in vowels:
+#         vowel_count += 1
 
-print("\nTotal vowels:", vowel_count)
+# print("\nTotal vowels:", vowel_count)
 
 
 '''6.	Write a program to analyze the vocabulary used in two different books. You need to:
@@ -297,26 +297,143 @@ Tasks:
 ●	Use sets to find the unique words in each text, and perform set operations to find the union, intersection, and differences.
 '''
 
-book1 = input("Enter text of Book 1: ").lower()
-book2 = input("Enter text of Book 2: ").lower()
+# book1 = input("Enter text of Book 1: ").lower()
+# book2 = input("Enter text of Book 2: ").lower()
 
-set1 = set(book1.split())
-set2 = set(book2.split())
+# set1 = set(book1.split())
+# set2 = set(book2.split())
 
-common = set1.intersection(set2)
-unique1 = set1.difference(set2)
-unique2 = set2.difference(set1)
-all_words = set1.union(set2)
+# common = set1.intersection(set2)
+# unique1 = set1.difference(set2)
+# unique2 = set2.difference(set1)
+# all_words = set1.union(set2)
 
-print("\nUnique words in Book 1:")
-print(set1)
-print("\nUnique words in Book 2:")
-print(set2)
-print("\nCommon words:")
-print(common)
-print("\nWords unique to Book 1:")
-print(unique1)
-print("\nWords unique to Book 2:")
-print(unique2)
+# print("\nUnique words in Book 1:")
+# print(set1)
+# print("\nUnique words in Book 2:")
+# print(set2)
+# print("\nCommon words:")
+# print(common)
+# print("\nWords unique to Book 1:")
+# print(unique1)
+# print("\nWords unique to Book 2:")
+# print(unique2)
 
-print("\nTotal unique words across both books:", len(all_words))
+# print("\nTotal unique words across both books:", len(all_words))
+
+
+'''7.	Write a program to develop an inventory system for a small store. Each product has a name and a quantity in stock. The system should allow you to:
+●	Add new products with their quantities.
+●	Update the quantity of an existing product.
+●	Display the product with the highest stock.
+●	Remove a product from the inventory once it is sold out (quantity reaches 0).
+●	Display the total number of unique products in the inventory.
+Tasks:
+●	Use a dictionary where the product names are the keys, and the quantities are the values.
+●	Implement functions for adding, updating, removing, and analyzing inventory.
+'''
+# Inventory System using Dictionary
+
+inventory = {}
+
+# Function to add a new product
+def add_product():
+    name = input("Enter product name: ")
+    quantity = int(input("Enter quantity: "))
+
+    inventory[name] = quantity
+    print(name, "added successfully.")
+
+
+# Function to update product quantity
+def update_quantity():
+    name = input("Enter product name: ")
+
+    if name in inventory:
+        quantity = int(input("Enter new quantity: "))
+        inventory[name] = quantity
+        print(name, "quantity updated.")
+
+        # Remove if quantity becomes 0
+        if quantity == 0:
+            remove_product(name)
+
+    else:
+        print(name, "not found in inventory.")
+
+
+# Function to remove a product
+def remove_product(name=None):
+    if name is None:
+        name = input("Enter product name: ")
+
+    if name in inventory:
+        del inventory[name]
+        print(name, "removed from inventory.")
+    else:
+        print(name, "not found in inventory.")
+
+
+# Function to display inventory
+def display_inventory():
+    if inventory:
+        print("\n--- Inventory ---")
+        for name, quantity in inventory.items():
+            print(name, ":", quantity)
+    else:
+        print("Inventory is empty.")
+
+
+# Function to display product with highest stock
+def highest_stock():
+    if inventory:
+        product = max(inventory, key=inventory.get)
+        print("Product with highest stock:", product)
+        print("Quantity:", inventory[product])
+    else:
+        print("Inventory is empty.")
+
+
+# Function to display total unique products
+def total_products():
+    print("Total unique products:", len(inventory))
+
+
+# Menu
+while True:
+
+    print("\n--- Inventory Management System ---")
+    print("1. Add Product")
+    print("2. Update Quantity")
+    print("3. Remove Product")
+    print("4. Display Inventory")
+    print("5. Display Highest Stock")
+    print("6. Display Total Products")
+    print("7. Exit")
+
+    choice = input("Enter your choice: ")
+
+    if choice == "1":
+        add_product()
+
+    elif choice == "2":
+        update_quantity()
+
+    elif choice == "3":
+        remove_product()
+
+    elif choice == "4":
+        display_inventory()
+
+    elif choice == "5":
+        highest_stock()
+
+    elif choice == "6":
+        total_products()
+
+    elif choice == "7":
+        print("Exiting program...")
+        break
+
+    else:
+        print("Invalid choice! Please try again.")
